@@ -58,7 +58,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   font-size: 0.8rem;
-  height: 100vh;
+  min-height: 200vh;
   color: #ffffff;
 }
 
