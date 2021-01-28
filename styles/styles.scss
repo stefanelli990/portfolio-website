@@ -9,7 +9,7 @@
     right: 0;
     transition: 0.5s;
     z-index: 1000;
-    min-height: 100vh;
+    
   }
 
   .landing-page-active {
@@ -37,7 +37,7 @@
       @include tablet {
       @include container(2rem 2rem, 960px);
     }
-      height: 10vh;
+      min-height: 10vh;
       display: flex;
       justify-content: space-between;
       align-items: center;
