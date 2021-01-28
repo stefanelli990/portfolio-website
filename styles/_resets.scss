@@ -23,7 +23,8 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
     font-size: 0.8rem;
-    
+    height: 100%;
+    width: 100%;
     @include phone {
         font-size: 1rem;
     }
