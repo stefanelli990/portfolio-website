@@ -46,8 +46,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
-  width: 100%;
 }
 
 body {
@@ -59,7 +57,7 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: 100%;
   font-size: 0.9rem;
   color: #ffffff;
 }
