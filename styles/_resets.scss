@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
     font-size: 0.8rem;
-    min-height: 200vh;
+    transform: translate3d(0,0,0); 
     @include phone {
         font-size: 1rem;
     }
