@@ -19,11 +19,11 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+    background-attachment: fixed;
     overflow-x: hidden;
     line-height: 1.6;
     font-size: 0.8rem;
-    
+    height: 100%;
     @include phone {
         font-size: 1rem;
     }
