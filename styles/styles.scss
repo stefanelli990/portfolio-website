@@ -9,10 +9,7 @@
     right: 0;
     transition: 0.5s;
     z-index: 1000;
-    background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
     
   }
 
@@ -41,7 +38,7 @@
       @include tablet {
       @include container(2rem 2rem, 960px);
     }
-      min-height: 10vh;
+      height: 10vh;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -139,7 +136,7 @@
       @include tablet {
         @include container(0rem 2rem, 960px);
       }
-      min-height: 90vh;
+      height: 90vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -210,13 +207,11 @@
   
 //skills 
 .skills {
-  background: $primary;
+  
   
   &-container {
-    @include container(5rem 1rem, 960px);
-  @include tablet {
-    @include container(10rem 2rem, 960px);
-  }
+    @include container(5rem 0 10rem 0, 960px);
+ 
   }
 
   &-grid {
@@ -238,7 +233,7 @@
 
   &-item {
     padding: 2rem;
-    background-color: rgba(lighten($primary, 2),0.5);
+    background-color: $primary;
   }
 
 
@@ -254,16 +249,14 @@
 
 //projects
 .projects {
-  background: $primary;
+  
   &-container {
-    @include container(5rem 1rem, 960px);
-    @include tablet {
-      @include container(10rem 2rem, 960px);
-    }
+    @include container(5rem 0 10rem 0, 960px);
+   
   }
 
   &-item {
-    background-color: rgba(lighten($primary, 2),0.5);
+    background-color: $primary;
     padding: 2rem 1rem;
     margin-bottom: 1rem;
     gap: 1rem;
@@ -335,14 +328,11 @@
 
 //about
 .about {
-  background: $primary;
+  
   &-container {
-    
     text-align: center;
-    @include container(5rem 1rem, 960px);
-    @include tablet {
-      @include container(10rem 2rem, 960px);
-    }
+    @include container(5rem 0 10rem 0, 960px);
+   
   }
 
   
@@ -360,7 +350,7 @@
     @include phone {
       padding: 2rem;
     }
-    background-color: rgba(lighten($primary, 2),0.5);
+    background-color: $primary;
   }
   &-button {
     padding: 0.8rem;
@@ -377,24 +367,21 @@
 
 //cotnact
 .contact {
-  background: $primary;
+ 
   
   &-container {
     
-    @include container(5rem 1rem, 960px);
-    @include tablet {
-      @include container(10rem 2rem, 960px);
-    }
+    @include container(5rem 0 10rem 0, 960px);
   }
 
   &-grid {
-    background-color: rgba(lighten($primary, 2),0.5);
-    padding: 2rem 1rem;
+    
+    
     display: grid;
     grid-template-columns: 1fr;
     gap: 5rem;
     @include tablet {
-      padding: 2rem;
+      
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
@@ -403,8 +390,8 @@
   input, textarea, button {
     width: 100%;
     padding: 1rem;
-    background-color: darken($primary, 1);
-    border: 2px solid darken($primary, 1);
+    background-color: darken($primary, 2);
+    border: 2px solid darken($primary, 2);
     outline: 0;
     margin-bottom: 1rem;
     resize: none;
@@ -438,7 +425,7 @@
   }
 
   &-info {
-    
+    background-color: $primary;
     padding: 2rem 0;
     
     div {

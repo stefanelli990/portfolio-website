@@ -49,9 +49,15 @@ html {
 }
 
 body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 54, 68, 0.9))), url("../images/bg-image.jpg");
+  background-image: linear-gradient(rgba(0, 54, 68, 0.9)), url("../images/bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow-x: hidden;
   line-height: 1.6;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #ffffff;
 }
 
@@ -145,11 +151,6 @@ p {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 54, 68, 0.9))), url("../images/bg-image.jpg");
-  background-image: linear-gradient(rgba(0, 54, 68, 0.9)), url("../images/bg-image.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .landing-page-active {
@@ -181,7 +182,7 @@ p {
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
-  min-height: 10vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,7 +286,7 @@ p {
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
-  min-height: 90vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,24 +391,11 @@ p {
   border: 2px solid #ffffff;
 }
 
-.skills {
-  background: #003644;
-}
-
 .skills-container {
-  padding: 5rem 1rem;
+  padding: 5rem 0 10rem 0;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .skills-container {
-    padding: 10rem 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    width: 100%;
-  }
 }
 
 .skills-grid {
@@ -441,7 +429,7 @@ p {
 
 .skills-item {
   padding: 2rem;
-  background-color: rgba(0, 62, 78, 0.5);
+  background-color: #003644;
 }
 
 .skills i {
@@ -449,28 +437,15 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.projects {
-  background: #003644;
-}
-
 .projects-container {
-  padding: 5rem 1rem;
+  padding: 5rem 0 10rem 0;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .projects-container {
-    padding: 10rem 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    width: 100%;
-  }
-}
-
 .projects-item {
-  background-color: rgba(0, 62, 78, 0.5);
+  background-color: #003644;
   padding: 2rem 1rem;
   margin-bottom: 1rem;
   gap: 1rem;
@@ -580,25 +555,12 @@ p {
   border: 2px solid #ffffff;
 }
 
-.about {
-  background: #003644;
-}
-
 .about-container {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 5rem 0 10rem 0;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .about-container {
-    padding: 10rem 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    width: 100%;
-  }
 }
 
 .about img {
@@ -611,7 +573,7 @@ p {
 
 .about-text {
   padding: 2rem 1rem;
-  background-color: rgba(0, 62, 78, 0.5);
+  background-color: #003644;
 }
 
 @media (min-width: 600px) {
@@ -633,29 +595,14 @@ p {
   }
 }
 
-.contact {
-  background: #003644;
-}
-
 .contact-container {
-  padding: 5rem 1rem;
+  padding: 5rem 0 10rem 0;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .contact-container {
-    padding: 10rem 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    width: 100%;
-  }
-}
-
 .contact-grid {
-  background-color: rgba(0, 62, 78, 0.5);
-  padding: 2rem 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -665,7 +612,6 @@ p {
 
 @media (min-width: 768px) {
   .contact-grid {
-    padding: 2rem;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -675,8 +621,8 @@ p {
 .contact input, .contact textarea, .contact button {
   width: 100%;
   padding: 1rem;
-  background-color: #00323f;
-  border: 2px solid #00323f;
+  background-color: #002e3a;
+  border: 2px solid #002e3a;
   outline: 0;
   margin-bottom: 1rem;
   resize: none;
@@ -733,6 +679,7 @@ p {
 }
 
 .contact-info {
+  background-color: #003644;
   padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
