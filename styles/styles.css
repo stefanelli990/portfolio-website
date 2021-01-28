@@ -47,6 +47,7 @@
 html {
   scroll-behavior: smooth;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 body {
@@ -60,6 +61,7 @@ body {
   line-height: 1.6;
   font-size: 0.8rem;
   min-height: 100vh;
+  overflow-y: scroll;
   color: #ffffff;
 }
 
