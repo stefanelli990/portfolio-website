@@ -266,6 +266,12 @@ p {
   transition: 0.5s;
 }
 
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
 .hamburger-menu li {
   margin: 5rem 0;
 }

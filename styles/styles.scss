@@ -98,6 +98,9 @@
     align-items: center;
     background-color: $dark;
     transition: 0.5s;
+    @include tablet {
+      display: none;
+  }
 
     li {
       margin: 5rem 0;
