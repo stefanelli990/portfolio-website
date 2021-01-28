@@ -58,8 +58,6 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   font-size: 0.8rem;
-  height: 100%;
-  width: 100%;
   color: #ffffff;
 }
 
@@ -277,7 +275,7 @@ p {
 }
 
 .showcase-container {
-  padding: 5rem 1rem;
+  padding: 0rem 1rem;
   max-width: 960px;
   margin: 0 auto;
   height: 90vh;
@@ -295,14 +293,6 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .showcase-container {
-    padding: 10rem 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-  }
 }
 
 .showcase h1 {
