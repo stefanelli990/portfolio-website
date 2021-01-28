@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import 'mixins';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-size: 0.8rem;
+    @include phone {
+        font-size: 1rem;
+    }
+    
+    color: $light;
+}
+
+
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: set-text-color($primary);
+}
+
+h1, h2, h3, h4 {
+margin-bottom: 1rem;
+font-weight: lighter;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+// utilities
+
+
+
+
+.heading {
+    @include small-phone {
+        font-size: 1.5rem;
+    }
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 11rem;
+    @include phone {
+        width: 13rem;
+    }
+}
+
+
+
+

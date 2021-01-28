@@ -1,0 +1,111 @@
+@import "variables";
+
+
+
+@mixin bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin container($padding, $max-width) {
+  padding: $padding;
+  max-width: $max-width;
+  margin: 0 auto;
+  
+}
+
+// set text color function
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $primary-dark;
+  } @else {
+    @return $light;
+  }
+}
+
+// media query
+
+@mixin small-phone {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// extends
+
+%nav-links {
+  position: relative;
+  color: $light;
+  text-transform: uppercase;
+  &::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -5;
+    content: "";
+    display: block;
+    height: 2px;
+    right: 0;
+    position: absolute;
+    background: $light;
+    transition: 0.3s;
+    width: 0;
+  }
+  &:hover::after {
+    width: 100%;
+    right: 0;
+  }
+}
+
+.nav-link {
+  @extend %nav-links;
+}
+
+%hamburger-bars {
+  width: 30px;
+  height: 2px;
+  background-color: $light;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  @extend %hamburger-bars;
+}
+
+
+
+
+
+
+
+
+
+
+
