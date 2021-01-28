@@ -13,17 +13,18 @@
 html {
     scroll-behavior: smooth;
     min-height: 100vh;
-}
-
-body {
     background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+body {
+    
     overflow-x: hidden;
     line-height: 1.6;
-    min-height: 100vh;
+   
     font-size: 0.9rem;
     
     @include phone {
