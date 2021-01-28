@@ -46,6 +46,7 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 body {
@@ -55,11 +56,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   overflow-x: hidden;
   line-height: 1.6;
   min-height: 100vh;
