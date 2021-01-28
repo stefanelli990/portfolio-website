@@ -182,6 +182,7 @@ p {
   padding: 1rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+  width: 100%;
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,6 +200,7 @@ p {
     padding: 2rem 2rem;
     max-width: 960px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -278,6 +280,7 @@ p {
   padding: 0rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+  width: 100%;
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,6 +303,7 @@ p {
     padding: 0rem 2rem;
     max-width: 960px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -386,6 +390,7 @@ p {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -393,6 +398,7 @@ p {
     padding: 10rem 2rem;
     max-width: 960px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -439,6 +445,7 @@ p {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -446,6 +453,7 @@ p {
     padding: 10rem 2rem;
     max-width: 960px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -565,6 +573,7 @@ p {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -572,6 +581,7 @@ p {
     padding: 10rem 2rem;
     max-width: 960px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -611,6 +621,7 @@ p {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -618,6 +629,7 @@ p {
     padding: 10rem 2rem;
     max-width: 960px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
