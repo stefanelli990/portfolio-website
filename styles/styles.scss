@@ -4,6 +4,16 @@
 @import "mixins";
 
 
+.bg-wrapper {
+  background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+
   .landing-page {
     position: relative;
     right: 0;
