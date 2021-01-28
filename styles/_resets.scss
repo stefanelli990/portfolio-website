@@ -16,6 +16,7 @@ html {
 }
 
 body {
+    z-index: 5;
     min-height: 100vh;
     background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
     background-position: center;
