@@ -277,7 +277,7 @@ p {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
-  height: 90vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,7 +292,6 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  height: 100%;
 }
 
 @media (min-width: 768px) {
