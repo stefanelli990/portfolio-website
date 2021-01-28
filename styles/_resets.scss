@@ -12,7 +12,7 @@
 
 html {
     scroll-behavior: smooth;
-    min-height: 100vh;
+    
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
     font-size: 0.8rem;
-    
+    height: 100vh;
     @include phone {
         font-size: 1rem;
     }
