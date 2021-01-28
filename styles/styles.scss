@@ -132,7 +132,7 @@
       @include tablet {
         @include container(0rem 2rem, 960px);
       }
-      height: 90vh;
+      min-height: 90vh;
       display: flex;
       justify-content: center;
       align-items: center;
