@@ -278,7 +278,7 @@ p {
   padding: 0rem 1rem;
   max-width: 960px;
   margin: 0 auto;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,6 +293,14 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .showcase-container {
+    padding: 0rem 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
 }
 
 .showcase h1 {

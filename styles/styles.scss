@@ -129,7 +129,10 @@
   .showcase {
     &-container {
       @include container(0rem 1rem, 960px);
-      height: 90vh;
+      @include tablet {
+        @include container(0rem 2rem, 960px);
+      }
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
