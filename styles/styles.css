@@ -58,7 +58,6 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   font-size: 0.8rem;
-  height: 100vh;
   color: #ffffff;
 }
 
@@ -152,6 +151,7 @@ p {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1000;
+  height: 100vh;
 }
 
 .landing-page-active {
@@ -182,7 +182,7 @@ p {
   padding: 1rem 1rem;
   max-width: 960px;
   margin: 0 auto;
-  min-height: 10vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +278,7 @@ p {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
-  min-height: 90vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
