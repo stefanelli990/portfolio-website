@@ -9,7 +9,11 @@
     right: 0;
     transition: 0.5s;
     z-index: 1000;
-   
+    background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
   }
 
   .landing-page-active {
@@ -203,9 +207,13 @@
   
 //skills 
 .skills {
-  @include container(5rem 1rem, 960px);
+  background: $primary;
+  
+  &-container {
+    @include container(5rem 1rem, 960px);
   @include tablet {
     @include container(10rem 2rem, 960px);
+  }
   }
 
   &-grid {
@@ -243,7 +251,7 @@
 
 //projects
 .projects {
-
+  background: $primary;
   &-container {
     @include container(5rem 1rem, 960px);
     @include tablet {
@@ -324,7 +332,7 @@
 
 //about
 .about {
- 
+  background: $primary;
   &-container {
     
     text-align: center;
@@ -366,7 +374,7 @@
 
 //cotnact
 .contact {
-  
+  background: $primary;
   
   &-container {
     

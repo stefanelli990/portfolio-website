@@ -46,16 +46,9 @@
 
 html {
   scroll-behavior: smooth;
-  min-height: 150vh;
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 54, 68, 0.9))), url("../images/bg-image.jpg");
-  background-image: linear-gradient(rgba(0, 54, 68, 0.9)), url("../images/bg-image.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   overflow-x: hidden;
   line-height: 1.6;
   font-size: 0.8rem;
@@ -152,6 +145,11 @@ p {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 54, 68, 0.9))), url("../images/bg-image.jpg");
+  background-image: linear-gradient(rgba(0, 54, 68, 0.9)), url("../images/bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .landing-page-active {
@@ -387,6 +385,10 @@ p {
 }
 
 .skills {
+  background: #003644;
+}
+
+.skills-container {
   padding: 5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
@@ -394,7 +396,7 @@ p {
 }
 
 @media (min-width: 768px) {
-  .skills {
+  .skills-container {
     padding: 10rem 2rem;
     max-width: 960px;
     margin: 0 auto;
@@ -439,6 +441,10 @@ p {
 .skills i {
   font-size: 4rem;
   margin-bottom: 0.5rem;
+}
+
+.projects {
+  background: #003644;
 }
 
 .projects-container {
@@ -568,6 +574,10 @@ p {
   border: 2px solid #ffffff;
 }
 
+.about {
+  background: #003644;
+}
+
 .about-container {
   text-align: center;
   padding: 5rem 1rem;
@@ -615,6 +625,10 @@ p {
   .about-button {
     max-width: 250px;
   }
+}
+
+.contact {
+  background: #003644;
 }
 
 .contact-container {
