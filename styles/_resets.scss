@@ -12,21 +12,20 @@
 
 html {
     scroll-behavior: smooth;
+    
+}
+
+body {
     min-height: 100vh;
     background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-body {
-    
+    background-color: $primary;
     overflow-x: hidden;
     line-height: 1.6;
-   
     font-size: 0.9rem;
-    
     @include phone {
         font-size: 1rem;
     }
