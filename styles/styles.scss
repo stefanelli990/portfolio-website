@@ -12,7 +12,7 @@
     right: 0;
     transition: 0.5s;
     z-index: 1000;
-    background-image: linear-gradient(rgba($primary,0.90)), url('../images/bg-image.jpg');
+    background-image: linear-gradient(rgba($primary,0.95)), url('../images/bg-image.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -183,6 +183,8 @@
       padding: 0.8rem;
       display: inline-block;
       width: 100%;
+      max-width: 250px;
+      border-radius: 30px;
       margin-bottom: 1rem;
       transition: 0.3s;
       &:hover {
@@ -190,9 +192,7 @@
         color: $light;
         border: 2px solid $light;
       } 
-      @include phone {
-        max-width: 250px;
-      }
+      
     }
     
     
@@ -226,10 +226,47 @@
   }
 }
 
+//divider 
+
+.divider {
+  background-color: $primary;
+  &-container {
+    @include container(5rem 1rem, 960px);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &-text {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  &-image {
+    
+    flex: 1;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 10rem;
+    
+  }
+}
+
 
 //projects
 .projects {
-  background-color: whitesmoke;
+  
   color: $dark;
   &-container {
     @include container(5rem 0 10rem 0, 960px);
@@ -299,6 +336,7 @@
     width: 100%;
     margin-bottom: 0.5rem;
     transition: 0.3s;
+    border-radius: 30px;
     &:hover {
       background: transparent;
       color: $primary;
@@ -324,6 +362,7 @@
     border: 2px solid $primary;
     width: 100%;
     display: inline-block;
+    border-radius: 30px;
     @include phone {
       max-width: 250px;
     }

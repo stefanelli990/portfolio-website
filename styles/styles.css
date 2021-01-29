@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
 .nav-link {
   position: relative;
   color: #ffffff;
@@ -40,8 +40,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.1rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
 }
 
 body {
@@ -78,7 +78,7 @@ p {
   text-transform: uppercase;
   margin-bottom: 0;
   text-align: center;
-  color: #008f81;
+  color: #008d7f;
 }
 
 .heading {
@@ -146,8 +146,8 @@ p {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 143, 129, 0.9))), url("../images/bg-image.jpg");
-  background-image: linear-gradient(rgba(0, 143, 129, 0.9)), url("../images/bg-image.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 141, 127, 0.95))), url("../images/bg-image.jpg");
+  background-image: linear-gradient(rgba(0, 141, 127, 0.95)), url("../images/bg-image.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -349,11 +349,13 @@ p {
 
 .showcase__button {
   background-color: #ffffff;
-  color: #008f81;
+  color: #008d7f;
   border: 2px solid #ffffff;
   padding: 0.8rem;
   display: inline-block;
   width: 100%;
+  max-width: 250px;
+  border-radius: 30px;
   margin-bottom: 1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -363,12 +365,6 @@ p {
   background: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
-}
-
-@media (min-width: 600px) {
-  .showcase__button {
-    max-width: 250px;
-  }
 }
 
 .skills {
@@ -405,11 +401,77 @@ p {
 .skills i {
   font-size: 4rem;
   margin-bottom: 0.5rem;
-  color: #008f81;
+  color: #008d7f;
+}
+
+.divider {
+  background-color: #008d7f;
+}
+
+.divider-container {
+  padding: 5rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .divider-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.divider-text {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.divider-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.divider img {
+  width: 10rem;
 }
 
 .projects {
-  background-color: whitesmoke;
   color: #3b3b3b;
 }
 
@@ -515,20 +577,21 @@ p {
 }
 
 .projects-button {
-  background-color: #008f81;
+  background-color: #008d7f;
   color: #ffffff;
-  border: 2px solid #008f81;
+  border: 2px solid #008d7f;
   padding: 0.8rem;
   display: block;
   width: 100%;
   margin-bottom: 0.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border-radius: 30px;
 }
 
 .projects-button:hover {
   background: transparent;
-  color: #008f81;
+  color: #008d7f;
 }
 
 .about {
@@ -545,11 +608,12 @@ p {
 
 .about-button {
   text-align: center;
-  color: #008f81;
+  color: #008d7f;
   padding: 0.8rem;
-  border: 2px solid #008f81;
+  border: 2px solid #008d7f;
   width: 100%;
   display: inline-block;
+  border-radius: 30px;
 }
 
 @media (min-width: 600px) {
@@ -606,7 +670,7 @@ p {
 }
 
 .contact input:focus, .contact textarea:focus, .contact button:focus {
-  border: 2px solid #008f81;
+  border: 2px solid #008d7f;
 }
 
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder, .contact button::-webkit-input-placeholder {
@@ -626,9 +690,9 @@ p {
 }
 
 .contact button {
-  background-color: #008f81;
+  background-color: #008d7f;
   color: #ffffff;
-  border: 2px solid #008f81;
+  border: 2px solid #008d7f;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -637,7 +701,7 @@ p {
 
 .contact button:hover {
   background-color: transparent;
-  color: #008f81;
+  color: #008d7f;
 }
 
 @media (min-width: 600px) {
@@ -675,7 +739,7 @@ p {
 .contact-info i {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #008f81;
+  color: #008d7f;
 }
 
 .contact-info h3 {
