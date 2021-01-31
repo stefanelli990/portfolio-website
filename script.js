@@ -25,6 +25,8 @@ toggle.addEventListener('click', () => {
 //     }
 // });
 
+
+
 // hamburger link scroll to section
 hamburgerLinks.forEach(hamburgerLink => {
         hamburgerLink.addEventListener('click', () => {

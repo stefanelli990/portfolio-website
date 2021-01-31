@@ -10,12 +10,10 @@
     letter-spacing: 1px;
 }
 
-// html {
-//     scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
    
-// }
-
-
+}
 
 body {
     overflow-x: hidden;
@@ -36,7 +34,7 @@ li {
 
 a {
     text-decoration: none;
-    color: set-text-color($primary);
+    color: $light;
 }
 
 h1, h2, h3, h4 {
@@ -48,9 +46,9 @@ p {
     margin-bottom: 20px;
 }
 
+
+
 // utilities
-
-
 .above-heading {
     text-transform: uppercase;
     margin-bottom: 0;
@@ -64,8 +62,21 @@ p {
     }
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding-bottom: 0.5rem;
     text-transform: uppercase;
+    position: relative;
+    &::after {
+        content:' ';
+        position: absolute;
+        top:100%;
+        left:50%;
+        width: 50px;
+        border:2px solid $primary;
+        border-radius:5px;
+       
+        transform:translateX(-50%);
+    }
 }
 
 .logo {
