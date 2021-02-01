@@ -10,10 +10,10 @@
     letter-spacing: 1px;
 }
 
-html {
-    scroll-behavior: smooth;
+// html {
+//     scroll-behavior: smooth;
    
-}
+// }
 
 body {
     overflow-x: hidden;
@@ -73,8 +73,6 @@ p {
         left:50%;
         width: 50px;
         border:2px solid $primary;
-        border-radius:5px;
-       
         transform:translateX(-50%);
     }
 }

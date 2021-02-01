@@ -15,7 +15,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    
 
     &::before {
       content: "";
@@ -24,7 +24,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background: rgba(darken($primary, 10),0.8);
+      background: rgba(darken($primary, 6),0.9);
       z-index: -2;
     }
   }
@@ -207,7 +207,7 @@
   &-item {
     padding: 4rem 2rem;
     background-color: darken($light, 5);
-    border-radius: 30px;
+    border-radius: 1rem;
   }
   
 
@@ -265,7 +265,7 @@
  
   color: $dark;
   &-container {
-    @include container(5rem 1rem, 960px);
+    @include container(5rem 1rem, 600px);
     @include laptop {
       @include container(10rem 1rem, 960px);
     }
@@ -279,6 +279,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     @include laptop {
       flex-direction: row;
       gap: 4rem;
@@ -302,10 +303,9 @@
 
   img {
   width: 100%;
-  border-radius: 30px;
-  @include laptop{
-   max-width: 500px;
-  }
+  max-width: 600px;
+  border-radius: 1rem;
+ 
   }
 
   &-buttons {
@@ -340,7 +340,7 @@
 //cotnact
 .contact {
   color: $light;
-  background-color: #00122c;
+  background-color: $dark;
   &-container {
     @include container(5rem 1rem, 960px);
     @include laptop {
@@ -349,17 +349,28 @@
   }
 
   &-grid {
+    
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5rem;
+    gap: 5rem 0;
     @include tablet {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: 1.5fr 0.5fr;
+      gap: 0 2rem;
+    }
+    @include laptop {
+      gap: 0 4rem;
+    }
+  }
+
+  form {
+
+    @include tablet {
+      text-align: left;
     }
   }
 
   input, textarea {
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: darken($dark, 2);
     width: 100%;
     padding: 1rem;
@@ -372,6 +383,7 @@
     @include phone {
       font-size: 1rem;
       
+      
     }
     &:focus {
       border: 2px solid $primary;
@@ -381,57 +393,88 @@
     }
    
   }
+  
 
   
 
   
 
   &-info {
-    border-radius: 10px;
-    background-color: lighten($dark, 2);
-    padding: 2rem 0;
-    color: $light;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
     text-align: center;
-    div {
-      margin: 2rem 0;
-      @include tablet {
-          margin: unset;
-      }
-  }
-      
-  i {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: $primary;
-  }
-  h3 {
-    margin-bottom: 0.5rem;
-  }
- 
-}
-}
-
-
-
-.social {
-  background-color: $dark;
-  &-container {
-    text-align: center;
-    
-    @include container(0 1rem 2rem, 960px);
-    a {
-      margin: 0 1rem;
-      font-size: 1.5rem;
+    @include tablet{
+      text-align: left;
     }
-  }
+    .info {
+      margin-bottom: 3rem;
+      li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        align-items: center;
+        @include tablet{
+          flex-direction: row;
+         
+        }
+      }
+      h2 {
+        margin: 0.5rem 0;
+        @include tablet {
+          margin: 0;
+        }
+      }
+      .info-icon {
+        width: 2rem;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .info-details {
+        
+        @include tablet {
+          margin-left: 1rem;
+        padding-left: 1rem;
+        border-left: 2px solid $light;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+     @include tablet {
+       justify-content: flex-start;
+       
+     }
+      li {
+        margin: 0 1rem;
+        background-color: lighten($dark, 10);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include phone {
+          margin: 0 1rem 0 0;
+        }
+      }
+    }
 }
+
+
+
+}
+
+
+
+
 footer {
+    background-color: $dark;
     width: 100%;
     padding: 2rem;
-    background-color: $dark;
     text-align: center;
     text-transform: uppercase;
 }
