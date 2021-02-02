@@ -66,7 +66,8 @@ p {
   top: 100%;
   left: 50%;
   width: 50px;
-  border: 2px solid #009485;
+  height: 4px;
+  background-color: #009485;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -160,7 +161,12 @@ p {
   background-color: goldenrod;
   color: #2c2c2c;
   border: 2px solid goldenrod;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+}
+
+.button-send:hover {
+  background-color: #e8c15f;
+  border: 2px solid #e8c15f;
 }
 
 .landing-page {
@@ -421,7 +427,23 @@ p {
 }
 
 .mobile-first {
-  background-color: #009485;
+  position: relative;
+  background-image: url("../images/mobile-first.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+.mobile-first::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 117, 106, 0.9);
+  z-index: -2;
 }
 
 .mobile-first__container {
@@ -467,6 +489,15 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .mobile-first__text {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .mobile-first__text h1 {
@@ -535,11 +566,11 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 4rem;
+    text-align: left;
   }
 }
 
 .projects-description {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,6 +584,14 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 992px) {
+  .projects-description {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .projects-image {
@@ -682,7 +721,7 @@ p {
 }
 
 .contact input, .contact textarea {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: #272727;
   width: 100%;
   padding: 1rem;
@@ -786,7 +825,7 @@ p {
   .contact-info .info .info-details {
     margin-left: 1rem;
     padding-left: 1rem;
-    border-left: 2px solid #ffffff;
+    border-left: 4px solid #ffffff;
   }
 }
 

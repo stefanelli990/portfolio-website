@@ -87,5 +87,9 @@
         background-color: goldenrod;
         color: $dark;
         border: 2px solid goldenrod;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
+        &:hover {
+          background-color: lighten(goldenrod, 15);
+          border: 2px solid lighten(goldenrod, 15);
+        }
       }

@@ -221,16 +221,32 @@
 
 
 .mobile-first {
-  background-color: $primary;
-
+  position: relative;
+  background-image: url('../images/mobile-first.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1000;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(darken($primary, 6),0.9);
+    z-index: -2;
+  }
  &__container {
   @include container(5rem 1rem, 960px);
+  
    display: flex;
    flex-direction: column;
    gap: 2rem;
    @include tablet {
      flex-direction: row;
      gap: 0;
+     
    }
  }
 
@@ -240,7 +256,10 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-
+    @include tablet {
+      text-align: left;
+      align-items: flex-start;
+    }
    h1 {
      font-size: 2rem;
    }
@@ -250,12 +269,14 @@
    flex: 1;
 
    img {
+    // transform: rotate(10deg);
      height: 300px;
      @include tablet {
        height: 450px;
      }
    }
  }
+ 
  
 }
 
@@ -283,16 +304,19 @@
     @include laptop {
       flex-direction: row;
       gap: 4rem;
-      
+      text-align: left;
     }
   }
 
   &-description {
-    text-align: center;
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
    align-items: center;
+   @include laptop {
+     align-items: flex-start;
+   }
   }
 
   &-image {
@@ -370,7 +394,7 @@
   }
 
   input, textarea {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background-color: darken($dark, 2);
     width: 100%;
     padding: 1rem;
@@ -435,7 +459,7 @@
         @include tablet {
           margin-left: 1rem;
         padding-left: 1rem;
-        border-left: 2px solid $light;
+        border-left: 4px solid $light;
         }
       }
     }
