@@ -4,6 +4,27 @@
 @import "extends";
 
 
+.parallax {
+  
+  @include desktop {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 100%;
+    box-shadow: 0px 1px 1px 0px gainsboro;
+  }
+  
+}
+
+.fixed-bottom {
+  
+  @include desktop {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+}
 
 
   .landing-page {
@@ -168,7 +189,7 @@
         font-size: 3rem;
       }
       @include desktop{
-        font-size: 4.5rem;
+        font-size: 4rem;
       }
     }
     p {
@@ -183,7 +204,7 @@
   
 //skills 
 .skills {
-  
+  background-color: $light;
   color: $dark;
   &-container {
     @include container(5rem 1rem, 960px);
@@ -207,7 +228,7 @@
   &-item {
     padding: 4rem 2rem;
     background-color: darken($light, 5);
-    border-radius: 1rem;
+    border-radius: $border-radius;
   }
   
 
@@ -269,7 +290,7 @@
    flex: 1;
 
    img {
-    // transform: rotate(10deg);
+    transform: rotate(5deg);
      height: 300px;
      @include tablet {
        height: 450px;
@@ -283,7 +304,7 @@
 
 //projects
 .projects {
- 
+  background-color: $light;
   color: $dark;
   &-container {
     @include container(5rem 1rem, 600px);
@@ -328,7 +349,7 @@
   img {
   width: 100%;
   max-width: 600px;
-  border-radius: 1rem;
+  border-radius: $border-radius;
  
   }
 
@@ -342,8 +363,9 @@
     @include phone {
       gap: 1rem;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
+    }
+    @include laptop {
+      justify-content: flex-start;
     }
   }
 }
@@ -368,7 +390,7 @@
   &-container {
     @include container(5rem 1rem, 960px);
     @include laptop {
-      @include container(10rem 1rem, 960px);
+      @include container(5rem 1rem, 960px);
     }
   }
 
@@ -394,13 +416,13 @@
   }
 
   input, textarea {
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     background-color: darken($dark, 2);
     width: 100%;
     padding: 1rem;
     border: 2px solid $dark;
     outline: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     resize: none;
     color: $light;
     transition: 0.3s;
@@ -472,31 +494,25 @@
        justify-content: flex-start;
        
      }
-      li {
+      .icon {
         margin: 0 1rem;
-        background-color: lighten($dark, 10);
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
+        
         display: flex;
         justify-content: center;
         align-items: center;
         @include phone {
-          margin: 0 1rem 0 0;
+          margin: 0 2rem 0 0;
         }
       }
     }
 }
-
-
-
 }
 
 
 
 
 footer {
-    background-color: $dark;
+    background-color: lighten($dark, 2);
     width: 100%;
     padding: 2rem;
     text-align: center;
