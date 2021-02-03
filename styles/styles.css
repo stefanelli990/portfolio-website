@@ -122,19 +122,25 @@ p {
   transition: 0.5s;
 }
 
-.button-light, .button-green, .button-download, .button-send {
+.button-light, .button-green, .button-download {
   background-color: #ffffff;
   color: #2c2c2c;
   border: 2px solid #ffffff;
   padding: 1rem;
   display: inline-block;
-  width: 100%;
-  max-width: 200px;
+  width: 80%;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .button-light, .button-green, .button-download {
+    width: 100%;
+    max-width: 250px;
+  }
 }
 
 .button-light:hover {
@@ -159,23 +165,6 @@ p {
   background-color: transparent;
   color: #009485;
   border: 2px solid #009485;
-}
-
-.button-send {
-  background-color: goldenrod;
-  color: #2c2c2c;
-  border: 2px solid goldenrod;
-}
-
-@media (min-width: 600px) {
-  .button-send {
-    font-size: 1rem;
-  }
-}
-
-.button-send:hover {
-  background-color: #e8c15f;
-  border: 2px solid #e8c15f;
 }
 
 .landing-page {
