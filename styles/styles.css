@@ -8,6 +8,10 @@
   letter-spacing: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   line-height: 1.6;
@@ -163,29 +167,15 @@ p {
   border: 2px solid goldenrod;
 }
 
+@media (min-width: 600px) {
+  .button-send {
+    font-size: 1rem;
+  }
+}
+
 .button-send:hover {
   background-color: #e8c15f;
   border: 2px solid #e8c15f;
-}
-
-@media (min-width: 1200px) {
-  .parallax {
-    display: block;
-    position: relative;
-    z-index: 1000;
-    margin-bottom: 100%;
-    -webkit-box-shadow: 0px 1px 1px 0px gainsboro;
-            box-shadow: 0px 1px 1px 0px gainsboro;
-  }
-}
-
-@media (min-width: 1200px) {
-  .fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
 }
 
 .landing-page {
@@ -709,7 +699,7 @@ p {
 
 @media (min-width: 992px) {
   .contact-container {
-    padding: 5rem 1rem;
+    padding: 10rem 1rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
@@ -722,177 +712,35 @@ p {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  gap: 5rem 0;
-}
-
-@media (min-width: 768px) {
-  .contact-grid {
-    -ms-grid-columns: 1.5fr 0.5fr;
-        grid-template-columns: 1.5fr 0.5fr;
-    gap: 0 2rem;
-  }
+  gap: 2rem;
 }
 
 @media (min-width: 992px) {
   .contact-grid {
-    gap: 0 4rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (min-width: 768px) {
-  .contact form {
-    text-align: left;
-  }
-}
-
-.contact input, .contact textarea {
-  border-radius: 0.5rem;
-  background-color: #272727;
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid #2c2c2c;
-  outline: 0;
-  margin-bottom: 0.5rem;
-  resize: none;
-  color: #ffffff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-@media (min-width: 600px) {
-  .contact input, .contact textarea {
-    font-size: 1rem;
-  }
-}
-
-.contact input:focus, .contact textarea:focus {
-  border: 2px solid #009485;
-}
-
-.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.contact input::placeholder, .contact textarea::placeholder {
-  color: #ffffff;
-}
-
-.contact-info {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .contact-info {
-    text-align: left;
-  }
-}
-
-.contact-info .info {
-  margin-bottom: 3rem;
-}
-
-.contact-info .info li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-width: 768px) {
-  .contact-info .info li {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.contact-info .info h2 {
-  margin: 0.5rem 0;
-}
-
-@media (min-width: 768px) {
-  .contact-info .info h2 {
-    margin: 0;
-  }
-}
-
-.contact-info .info .info-icon {
-  width: 2rem;
-  font-size: 2rem;
+.contact-item ul ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-@media (min-width: 768px) {
-  .contact-info .info .info-details {
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-left: 4px solid #ffffff;
-  }
+.contact-item ul ul li {
+  margin: 0 1rem;
 }
 
-.contact-info .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.contact-item ul ul li a {
   font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .contact-info .social {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-.contact-info .social .icon {
-  margin: 0 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-width: 600px) {
-  .contact-info .social .icon {
-    margin: 0 2rem 0 0;
-  }
-}
-
 footer {
-  background-color: #313131;
+  background-color: #2f2f2f;
   width: 100%;
   padding: 2rem;
   text-align: center;

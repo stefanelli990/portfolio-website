@@ -87,6 +87,9 @@
         background-color: goldenrod;
         color: $dark;
         border: 2px solid goldenrod;
+        @include phone {
+          font-size: 1rem;
+        }
         &:hover {
           background-color: lighten(goldenrod, 15);
           border: 2px solid lighten(goldenrod, 15);
