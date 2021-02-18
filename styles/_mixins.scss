@@ -20,7 +20,7 @@
 // media query
 
 @mixin small-phone {
-  @media (max-width: 350px) {
+  @media (max-width: 600px) {
     @content;
   }
 }

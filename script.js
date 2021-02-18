@@ -3,15 +3,23 @@ const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navigation = document.querySelector('.navigation');
 const hamburgerLinks = document.querySelectorAll('.hamburger-link');
 const body = document.querySelector('body');
-const landingPage = document.querySelector('.landing-page');
+const overlay = document.querySelector('.overlay-hamburger');
 
 
 // open/close hamburger and toggle animation 
 toggle.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('hamburger-menu-active');
     toggle.classList.toggle('change');
+    overlay.classList.toggle('overlay-hamburger-active');
     body.classList.toggle('body-scroll');
-    landingPage.classList.toggle('landing-page-active');
+});
+
+// outside close
+overlay.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('hamburger-menu-active');
+    overlay.classList.remove('overlay-hamburger-active');
+    body.classList.remove('body-scroll');
+    toggle.classList.remove('change');
 });
 
 
@@ -33,6 +41,6 @@ hamburgerLinks.forEach(hamburgerLink => {
         hamburgerMenu.classList.remove('hamburger-menu-active');
         toggle.classList.remove('change');
         body.classList.remove('body-scroll');
-        landingPage.classList.remove('landing-page-active');
+        overlay.classList.remove('overlay-hamburger-active');
     });
 });
