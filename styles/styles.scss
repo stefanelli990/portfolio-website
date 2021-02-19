@@ -4,8 +4,40 @@
 @import "extends";
 
 
-//landing page
-  .landing-page {
+
+
+
+//navigation
+.navigation {
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include phone {
+      display: block;
+    }
+    &__container {
+      @include container(1rem 1rem, 960px);
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__nav-links {
+      display: flex;
+    }
+    &__nav-link {
+      margin: 0 1rem;
+    }
+  }
+
+ 
+  
+
+  //showcase
+  .showcase {
     background-image: url('../images/bg-image.jpg');
     background-position: center;
     background-size: cover;
@@ -19,188 +51,51 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background: rgba(darken($primary, 6),0.9);
+      background: rgba(darken($primary, 10),0.95);
       z-index: -1;
     }
-  }
-
- 
-
-.body-scroll {
-  overflow-y: hidden;
-  @include phone{
-      overflow-y: visible;
-  }
-}
-
-.disable-scroll-images {
-  overflow-y: hidden;
-}
-
-  .navigation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     &-container {
-      @include container(1rem 1rem, 960px);
-      height: 10vh;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    
-    
-    .nav-links {
-      display: none;
-      li {
-        margin-left: 20px;
-      
-      }
-      @include tablet {
-        display: flex;
-      }
-    }
-
-    
-    .toggle {
-      z-index: 105;
-      cursor: pointer;
-      transition: 0.5s;
-       @include tablet {
-         display: none;
-       }
-     }
-
-     // toggle animations
-
-     .change .bar1 {
-      transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    
-    .change .bar2 {
-      opacity: 0;
-    }
-    
-    .change .bar3 {
-      width: 30px;
-      transform: rotate(45deg) translate(-6px, -5px);
-    }
-    
-  }
-
-  .hamburger-menu {
-    position: fixed;
-    top: 0;
-    right: -70%;
-    width: 70%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $dark;
-    transition: 0.5s;
-    z-index: 102;
-    @include tablet {
-      display: none;
-  }
-
-    li {
-      margin: 5rem 0;
-    }
-  }
-
-  .hamburger-menu-active {
-    right: 0; 
-}
-
-.overlay-hamburger {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  z-index: 101;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.overlay-hamburger-active {
-  visibility: visible;
-  opacity: 1;
-}
-  
-
-    
-
-  
-  
-  
-
-  // .navigation-animation {
-  //   animation: animation 0.5s;
-  //   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-  //   background-color: $primary;
-  //   @keyframes animation {
-  //     0% {
-  //       transform: translateY(-100%);
-  //     }
-  //     100% {
-  //       transform: translateY(0%);
-  //     }
-  //   }
-  // }
-
-  .showcase {
-    &-container {
-      @include container(0rem 1rem, 960px);
+      @include container(0rem 1rem 5rem, 960px);
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      text-align: center;
-      
+      text-transform: uppercase;
+      @include phone {
+        @include container(0rem 1rem, 960px);
+      }
     }
 
-    
-
     h1 {
-      text-transform: uppercase;
       font-size: 2rem;
-      font-weight: 600;
-      
       @include phone {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       @include laptop {
         font-size: 4rem;
       }
     }
+
     p {
-      font-size: 1rem;
-      text-transform: uppercase;
-      @include phone {
+      @include laptop {
         font-size: 1.5rem;
       }
     }
+
+    
   }
 
   //bottom navigation
   .bottom-navigation {
-     
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: $dark;
+    background-color: lighten($dark, 3);
     z-index: 99;
-    font-weight: bolder;
+    
     @include phone{
       display: none;
     }
@@ -230,9 +125,7 @@
 
     li {
       width: 100%;
-    }
-
-    
+    }    
   }
 
   
@@ -274,7 +167,7 @@
 }
 
 
-
+//mobile first
 .mobile-first {
   position: relative;
   background-image: url('../images/mobile-first.jpg');
@@ -289,7 +182,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(darken($primary, 6),0.9);
+    background: rgba(darken($primary, 10),0.95);
     z-index: -1;
   }
  &__container {
@@ -316,7 +209,7 @@
       align-items: flex-start;
     }
    h1 {
-     font-size: 2rem;
+     font-size: 1.8rem;
    }
  }
 
@@ -410,6 +303,10 @@
   background-color: darken($light, 5);
   color: $dark;
   &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     @include container(5rem 1rem, 960px);
     @include laptop {
       @include container(10rem 1rem, 960px);
@@ -422,7 +319,7 @@
   color: $light;
   background-color: $dark;
   &-container {
-    @include container(5rem 1rem, 960px);
+    @include container(5rem 1rem 10rem, 960px);
     @include laptop {
       @include container(10rem 1rem, 960px);
     }
@@ -447,20 +344,35 @@
     
     
     ul {
+      background-color: lighten($dark, 1);
+      display: inline-block;
+      padding: 1rem;
+      width: 100%;
+      max-width: 300px;
       ul {
         display: flex;
         justify-content: center;
-       
+        padding: 0;
         li {
           margin: 0 1rem;
-          
-          
           a {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
           }
+          
+          
         }
         
       } 
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      
+      transition: 0.3s;
+      &:hover {
+        color: $primary;
+      }
     }
   }
 
@@ -470,10 +382,3 @@
 
 
 
-footer {
-    background-color: lighten($dark, 1);
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-}

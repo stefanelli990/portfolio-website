@@ -11,48 +11,33 @@
   
     
     
-    <!-- landing page -->
-    <section class="landing-page">
+    
       <!-- navigation -->
       <nav class="navigation">
-        <div class="navigation-container">
-          <a href="#" class="navigation-logo">
-            <img src="./images/logo.svg" class="logo" alt="" />
-          </a>
-          <ul class="nav-links">
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Portfolio</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+        <div class="navigation__container"> 
+          <ul class="navigation__nav-links">
+            <li><a href="#skills" class="navigation__nav-link">Skills</a></li>
+            <li><a href="#projects" class="navigation__nav-link">Portfolio</a></li>
+            <li><a href="#about" class="navigation__nav-link">About</a></li>
+            <li><a href="#contact" class="navigation__nav-link">Contact</a></li>
           </ul>
-          <div class="toggle">
-            <div class="bar1"></div>  
-            <div class="bar2"></div>  
-            <div class="bar3"></div>  
-        </div>
         </div>
       </nav>
 
-      <!-- hamburger menu -->
-      <aside class="hamburger-menu">
-            <ul class="hamburger-nav-links">
-              <li><a href="#skills" class="nav-link hamburger-link">Skills</a></li>
-              <li><a href="#projects" class="nav-link hamburger-link">Portfolio</a></li>
-              <li><a href="#about" class="nav-link hamburger-link">About</a></li>
-              <li><a href="#contact" class="nav-link hamburger-link">Contact</a></li>
-            </ul>
-      </aside>
-      <div class="overlay-hamburger"></div>
+      
       
       <!-- main content -->
       <main class="showcase">
         <div class="showcase-container">
-              <h1>Design & development</h1>
-              <p>Self-taught front‑end developer focused on crafting clean and user‑friendly experiences</p>
-                <a href="#projects" class="button-light">View Projects</a>
+              <h1>Design & Development</h1>
+              <p>Self-taught web designer and developer focused on crafting clean and user‑friendly experiences</p>
+              <a href="#projects" class="button-light">View Projects</a>
         </div>
       </main>
 
+
+      
+      <!-- bottom navigation -->
       <nav class="bottom-navigation">
         <div class="bottom-navigation__container">
           <ul class="bottom-navigation__bottom-navlinks">
@@ -63,7 +48,7 @@
           </ul>
         </div>
       </nav>
-    </section>
+  
 
 
     
@@ -79,13 +64,15 @@
       </div>
       <div class="skills-item">
         <i class="fas fa-code"></i>
-        <h2>Front End Development</h2>
+        <h2>Web Development</h2>
         <p>I like bringing ideas to life in the browser using HTML, CSS and Javascript. If you've got a design, I can create the front-end code for it.</p>
       </div>
     </div>
   </div>
 </section>
    
+
+
   <!-- mobile first -->
   <section class="mobile-first">
     <div class="mobile-first__container">
@@ -98,6 +85,7 @@
       </div>
     </div>
   </section>
+
 
 
     <!-- portfolio -->
@@ -152,10 +140,11 @@
     <section id="about" class="about">
       <div class="about-container">
         <h1 class="heading">who i am</h1>
-          <p>I'm Stefan Mohenski, web designer and front end developer based in Nis.</p>
+          <p>I'm Stefan Mohenski, web designer and developer based in Nis.</p>
           <p>Since my childhood i've been always attracted to the computers. As i grew up, i'm getting more and more interests in web development, particulary in front end development. My passion are HTML, CSS and Javascript which i use to create responive, mobile-first websites and web apps that provide users the best and most appropriate experience suited to their device, especially on mobile phones.</p>
           <p>Aside from web development, i enjoy drawing, walking and cooking italian and chinese dishes.</p>
-          <a href="resume.pdf" class="button-download" download>Download CV&nbsp;<i class="fas fa-download"></i></a>
+          <br>
+          <a href="" class="button-download">Download CV&nbsp;<i class="fas fa-file-download"></i></a>
       </div>
     </section>
  
@@ -165,20 +154,20 @@
     
   
   <!-- contact -->
-    <section id="contact" class="contact">
+    <footer id="contact" class="contact">
       <div class="contact-container">
         <h1 class="heading">GET IN TOUCH</h1>
         <div class="contact-grid">
           <div class="contact-item">
             <ul>
               <li><h2>Call Me</h2></li>
-              <li><p>+381 (0)69 1990 16 5</p></li>
+              <li><a href="tel:+381691990165">+381 (0)69 1990 16 5</a></li>
             </ul>
           </div>
           <div class="contact-item">
             <ul>
               <li><h2>Email Me</h2></li>
-              <li><p>stefan.mohenski@gmail.com</p></li>
+              <li><a href="mailto:stefan.mohenski@gmail.com">stefan.mohenski@gmail.com</a></li>
             </ul>
           </div>
           <div class="contact-item">
@@ -193,10 +182,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- footer -->
-    <footer>© 2021 Stefan Mohenski. All rights reserved.</footer>
+    
 
  
 

@@ -21,38 +21,27 @@
     }
   }
   
-  .nav-link {
+  .navigation__nav-link {
     @extend %nav-links;
   }
   
-  %hamburger-bars {
-    width: 30px;
-    height: 2px;
-    background-color: $light;
-    margin: 7px 0;
-    transition: 0.5s;
-  }
-  
-  .bar1,
-  .bar2,
-  .bar3 {
-    @extend %hamburger-bars;
-  }
-  
+ 
   %buttons {
         background-color: $light;
         color: $dark;
         border: 2px solid $light;
-        padding: 1rem 2.5rem;
+        padding: 1rem;
         border-radius: $border-radius;
         margin-bottom: 0.5rem;
         transition: 0.3s;
         cursor: pointer;
+        width: 100%;
+        max-width: 200px;
+        text-transform: capitalize;
       }
   
       .button-light {
         @extend %buttons;
-       
         &:hover {
           background: transparent;
           color: $light;
@@ -73,7 +62,6 @@
       }
   
       .button-download {
-        
         @extend %buttons;
         background-color: transparent;
         color: $primary;
