@@ -30,14 +30,15 @@
         background-color: $light;
         color: $dark;
         border: 2px solid $light;
-        padding: 1rem;
+        padding: 1rem ;
         border-radius: $border-radius;
         margin-bottom: 0.5rem;
         transition: 0.3s;
         cursor: pointer;
+        text-transform: capitalize;
+        display: inline-block;
         width: 100%;
         max-width: 200px;
-        text-transform: capitalize;
       }
   
       .button-light {
@@ -53,7 +54,9 @@
         @extend %buttons;
         background-color: $primary;
         color: $light;
+        padding: 1rem;
         border: 2px solid $primary;
+        
         &:hover {
           background: transparent;
           color: $primary;

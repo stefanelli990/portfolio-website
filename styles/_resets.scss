@@ -7,20 +7,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
     letter-spacing: 1px;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    overflow-x: hidden;
-    line-height: 1.6;
     font-size: 0.8rem;
     @include phone {
         font-size: 1rem;
     }
+}
+
+body {
+    overflow-x: hidden;
     color: $light;
 }
 
@@ -42,7 +42,7 @@ margin-bottom: 1rem;
 }
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 
@@ -56,12 +56,12 @@ p {
 }
 
 .heading {
-    font-size: 1.6rem;
     text-align: center;
     margin-bottom: 4rem;
     padding-bottom: 0.5rem;
     text-transform: uppercase;
     position: relative;
+    font-size: 1.7rem;
     &::after {
         content:' ';
         position: absolute;

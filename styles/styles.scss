@@ -5,7 +5,13 @@
 
 
 
-
+.parallax {
+  @include laptop {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 400px;
+  }
+}
 
 //navigation
 .navigation {
@@ -68,22 +74,16 @@
     }
 
     h1 {
-      font-size: 2rem;
-      @include phone {
-        font-size: 2.5rem;
-      }
+      font-size: 2.5rem;
       @include laptop {
         font-size: 4rem;
       }
     }
-
     p {
       @include laptop {
         font-size: 1.5rem;
       }
     }
-
-    
   }
 
   //bottom navigation
@@ -154,7 +154,6 @@
 
   &-item {
     padding: 4rem 2rem;
-    background-color: darken($light, 5);
     border-radius: $border-radius;
   }
   
@@ -199,6 +198,7 @@
  }
 
  &__text {
+   
    flex: 1;
    display: flex;
    justify-content: center;
@@ -208,9 +208,9 @@
       text-align: left;
       align-items: flex-start;
     }
-   h1 {
-     font-size: 1.6rem;
-   }
+    h1 {
+      font-size: 1.7rem;
+    }
  }
 
  &__image {
@@ -220,7 +220,7 @@
     transform: rotate(5deg);
      height: 300px;
      @include tablet {
-       height: 450px;
+       height: 400px;
      }
    }
  }
@@ -278,6 +278,7 @@
   width: 100%;
   max-width: 600px;
   border-radius: $border-radius;
+  border: 1px solid gainsboro;
  
   }
 
@@ -288,11 +289,8 @@
     align-items: center;
     flex-direction: row;
     text-align: center;
-    gap: 0.5rem;
-    @include phone {
-      gap: 1rem;
-      
-    }
+    gap: 1rem;
+    
     @include laptop {
       justify-content: flex-start;
     }
@@ -307,10 +305,7 @@
   background-color: darken($light, 5);
   color: $dark;
   &-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    
     @include container(5rem 1rem, 960px);
     @include laptop {
       @include container(10rem 1rem, 960px);
@@ -320,13 +315,17 @@
 
 //cotnact
 .contact {
+  @include laptop {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+  }  
   color: $light;
   background-color: $dark;
   &-container {
     @include container(5rem 1rem 10rem, 960px);
-    @include laptop {
-      @include container(10rem 1rem, 960px);
-    }
+  
     
   }
 
