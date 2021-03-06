@@ -11,6 +11,11 @@
     z-index: 2;
     margin-bottom: 400px;
   }
+  #fake-contact {
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+  }
 }
 
 //navigation
@@ -61,7 +66,7 @@
       z-index: -1;
     }
     &-container {
-      @include container(0rem 1rem 5rem, 960px);
+      @include container(0rem 1rem 5rem, 600px);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -69,7 +74,10 @@
       flex-direction: column;
       text-transform: uppercase;
       @include phone {
-        @include container(0rem 1rem, 960px);
+        @include container(0rem 1rem, 600px);
+      }
+      @include laptop {
+        @include container(0 1rem, 960px);
       }
     }
 
@@ -99,11 +107,10 @@
     @include phone{
       display: none;
     }
-    &__container {
-      @include container(1rem 0.5rem, 960px);
-    }
+   
 
-    &__bottom-navlinks {
+    &__container {
+      @include container(1rem, 960px);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -133,30 +140,27 @@
 .skills {
   background-color: $light;
   color: $dark;
-  &-container {
-    @include container(5rem 1rem, 960px);
+  &__container {
+    @include container(5rem 1rem, 600px);
     @include laptop {
       @include container(10rem 1rem, 960px);
     }
   }
-  &-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 1rem;
-    @include tablet{
-      grid-template-columns: 1fr 1fr; 
-    }
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     @include laptop {
-      gap: 2rem;
+      flex-direction: row;
+      
     }
   }
 
-  &-item {
-    padding: 4rem 2rem;
-    border-radius: $border-radius;
+  li {
+    flex: 1;
+    
   }
-  
 
   i {
     font-size: 4rem;
@@ -185,12 +189,14 @@
     z-index: -1;
   }
  &__container {
-  @include container(5rem 1rem, 960px);
-  
+  @include container(5rem 1rem, 600px);
+  @include laptop {
+    @include container(5rem 1rem, 960px);
+  }
    display: flex;
    flex-direction: column;
    gap: 2rem;
-   @include tablet {
+   @include laptop {
      flex-direction: row;
      gap: 0;
      
@@ -204,12 +210,13 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-    @include tablet {
+    @include laptop {
       text-align: left;
       align-items: flex-start;
     }
     h1 {
       font-size: 1.7rem;
+     
     }
  }
 
@@ -306,7 +313,7 @@
   color: $dark;
   &-container {
     
-    @include container(5rem 1rem, 960px);
+    @include container(5rem 1rem, 600px);
     @include laptop {
       @include container(10rem 1rem, 960px);
     }
@@ -325,7 +332,9 @@
   background-color: $dark;
   &-container {
     @include container(5rem 1rem 10rem, 960px);
-  
+    @include phone {
+      @include container(5rem 1rem, 960px);
+    }
     
   }
 
@@ -349,9 +358,10 @@
     ul {
       background-color: lighten($dark, 1);
       display: inline-block;
-      padding: 1rem;
+      padding: 1.5rem;
       width: 100%;
       max-width: 300px;
+      border-radius: $border-radius;
       ul {
         display: flex;
         justify-content: center;
@@ -372,7 +382,7 @@
     }
     a {
       
-      transition: 0.3s;
+      transition: $transition;
       &:hover {
         color: $primary;
       }

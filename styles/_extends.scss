@@ -12,7 +12,7 @@
       right: 0;
       position: absolute;
       background: $light;
-      transition: 0.3s;
+      transition: $transition;
       width: 0;
     }
     &:hover::after {
@@ -33,7 +33,7 @@
         padding: 1rem ;
         border-radius: $border-radius;
         margin-bottom: 0.5rem;
-        transition: 0.3s;
+        transition: $transition;
         cursor: pointer;
         text-transform: capitalize;
         display: inline-block;
