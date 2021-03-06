@@ -692,10 +692,9 @@ p {
 .contact-item ul {
   background-color: #2f2f2f;
   display: inline-block;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 100%;
   max-width: 300px;
-  border-radius: 30px;
 }
 
 .contact-item ul ul {
