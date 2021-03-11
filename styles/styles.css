@@ -111,6 +111,12 @@ p {
   max-width: 200px;
 }
 
+@media (max-width: 600px) {
+  .button-light, .button-green, .button-download {
+    max-width: 150px;
+  }
+}
+
 .button-light:hover {
   background: transparent;
   color: #ffffff;
