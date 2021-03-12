@@ -334,7 +334,7 @@
   &-container {
     @include container(5rem 1rem 10rem, 960px);
     @include phone {
-      @include container(5rem 1rem, 960px);
+      @include container(7rem 1rem, 960px);
     }
     
   }
@@ -343,7 +343,7 @@
     
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
     @include laptop {
       grid-template-columns: 1fr 1fr 1fr;
       
@@ -353,16 +353,7 @@
   }
 
   &-item {
-    
-    
-    
     ul {
-      background-color: lighten($dark, 1);
-      display: inline-block;
-      padding: 1rem;
-      width: 100%;
-      max-width: 300px;
-      
       ul {
         display: flex;
         justify-content: center;
@@ -372,10 +363,7 @@
           a {
             font-size: 1.2rem;
           }
-          
-          
         }
-        
       } 
     }
     h2 {
@@ -389,8 +377,6 @@
       }
     }
   }
-
-
 }
 
 
