@@ -5,8 +5,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  letter-spacing: 1px;
 }
 
 html {
@@ -23,6 +21,8 @@ html {
 body {
   overflow-x: hidden;
   color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 1px;
 }
 
 li {
@@ -172,7 +172,7 @@ p {
 }
 
 .navigation__container {
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
@@ -208,6 +208,12 @@ p {
   z-index: 1;
 }
 
+@media (min-width: 992px) {
+  .showcase {
+    background-attachment: fixed;
+  }
+}
+
 .showcase::before {
   content: "";
   position: absolute;
@@ -220,7 +226,7 @@ p {
 }
 
 .showcase-container {
-  padding: 0rem 1rem 5rem;
+  padding: 0rem 1.5rem 5rem;
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
@@ -244,7 +250,7 @@ p {
 
 @media (min-width: 600px) {
   .showcase-container {
-    padding: 0rem 1rem;
+    padding: 0rem 1.5rem;
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
@@ -254,7 +260,7 @@ p {
 
 @media (min-width: 992px) {
   .showcase-container {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
@@ -263,12 +269,12 @@ p {
 }
 
 .showcase h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 992px) {
   .showcase h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
@@ -279,6 +285,7 @@ p {
 }
 
 .bottom-navigation {
+  line-height: normal;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -295,7 +302,7 @@ p {
 }
 
 .bottom-navigation__container {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
@@ -303,9 +310,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -330,7 +336,7 @@ p {
 
 .bottom-navigation__bottom-navlink i {
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .bottom-navigation li {
@@ -343,7 +349,7 @@ p {
 }
 
 .skills__container {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
@@ -352,7 +358,7 @@ p {
 
 @media (min-width: 992px) {
   .skills__container {
-    padding: 10rem 1rem;
+    padding: 10rem 1.5rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
@@ -401,6 +407,12 @@ p {
   z-index: 0;
 }
 
+@media (min-width: 992px) {
+  .mobile-first {
+    background-attachment: fixed;
+  }
+}
+
 .mobile-first::before {
   content: "";
   position: absolute;
@@ -413,7 +425,7 @@ p {
 }
 
 .mobile-first__container {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
@@ -430,7 +442,7 @@ p {
 
 @media (min-width: 992px) {
   .mobile-first__container {
-    padding: 5rem 1rem;
+    padding: 5rem 1.5rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
@@ -487,8 +499,6 @@ p {
 }
 
 .mobile-first__image img {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
   height: 300px;
 }
 
@@ -504,7 +514,7 @@ p {
 }
 
 .projects-container {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
@@ -513,7 +523,7 @@ p {
 
 @media (min-width: 992px) {
   .projects-container {
-    padding: 10rem 1rem;
+    padding: 10rem 1.5rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
@@ -631,7 +641,7 @@ p {
 }
 
 .about-container {
-  padding: 5rem 1rem;
+  padding: 5rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
@@ -640,7 +650,7 @@ p {
 
 @media (min-width: 992px) {
   .about-container {
-    padding: 10rem 1rem;
+    padding: 10rem 1.5rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
@@ -663,7 +673,7 @@ p {
 }
 
 .contact-container {
-  padding: 5rem 1rem 10rem;
+  padding: 5rem 1.5rem 10rem;
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
@@ -672,7 +682,7 @@ p {
 
 @media (min-width: 600px) {
   .contact-container {
-    padding: 7rem 1rem;
+    padding: 7rem 1.5rem;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;

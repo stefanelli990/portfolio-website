@@ -30,7 +30,7 @@
       display: block;
     }
     &__container {
-      @include container(1rem 1rem, 960px);
+      @include container(1rem 1.5rem, 960px);
       height: 10vh;
       display: flex;
       justify-content: center;
@@ -55,6 +55,9 @@
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
+    @include laptop {
+      background-attachment: fixed;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -66,7 +69,7 @@
       z-index: -1;
     }
     &-container {
-      @include container(0rem 1rem 5rem, 600px);
+      @include container(0rem 1.5rem 5rem, 600px);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -74,17 +77,17 @@
       flex-direction: column;
       text-transform: uppercase;
       @include phone {
-        @include container(0rem 1rem, 600px);
+        @include container(0rem 1.5rem, 600px);
       }
       @include laptop {
-        @include container(0 1rem, 960px);
+        @include container(0 1.5rem, 960px);
       }
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       @include laptop {
-        font-size: 4rem;
+        font-size: 5rem;
       }
     }
     p {
@@ -96,6 +99,7 @@
 
   //bottom navigation
   .bottom-navigation {
+    line-height: normal;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -110,10 +114,11 @@
    
 
     &__container {
-      @include container(1rem, 960px);
+      @include container(1.5rem 1rem, 960px);
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
+      
     }
 
     &__bottom-navlink {
@@ -126,13 +131,13 @@
       
       i {
         font-size: 1.2rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
       }
     }
-
     li {
       width: 100%;
-    }    
+    }
+       
   }
 
   
@@ -141,9 +146,9 @@
   background-color: $light;
   color: $dark;
   &__container {
-    @include container(5rem 1rem, 600px);
+    @include container(5rem 1.5rem, 600px);
     @include laptop {
-      @include container(10rem 1rem, 960px);
+      @include container(10rem 1.5rem, 960px);
     }
   }
   
@@ -178,6 +183,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
+  @include laptop {
+    background-attachment: fixed;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -189,9 +197,9 @@
     z-index: -1;
   }
  &__container {
-  @include container(5rem 1rem, 600px);
+  @include container(5rem 1.5rem, 600px);
   @include laptop {
-    @include container(5rem 1rem, 960px);
+    @include container(5rem 1.5rem, 960px);
   }
    display: flex;
    flex-direction: column;
@@ -224,7 +232,6 @@
    flex: 1;
 
    img {
-    transform: rotate(5deg);
      height: 300px;
      @include tablet {
        height: 400px;
@@ -241,9 +248,9 @@
   background-color: $light;
   color: $dark;
   &-container {
-    @include container(5rem 1rem, 600px);
+    @include container(5rem 1.5rem, 600px);
     @include laptop {
-      @include container(10rem 1rem, 960px);
+      @include container(10rem 1.5rem, 960px);
     }
   }
 
@@ -314,9 +321,9 @@
   color: $dark;
   &-container {
     
-    @include container(5rem 1rem, 600px);
+    @include container(5rem 1.5rem, 600px);
     @include laptop {
-      @include container(10rem 1rem, 960px);
+      @include container(10rem 1.5rem, 960px);
     }
   }
 }
@@ -332,9 +339,9 @@
   color: $light;
   background-color: $dark;
   &-container {
-    @include container(5rem 1rem 10rem, 960px);
+    @include container(5rem 1.5rem 10rem, 960px);
     @include phone {
-      @include container(7rem 1rem, 960px);
+      @include container(7rem 1.5rem, 960px);
     }
     
   }
