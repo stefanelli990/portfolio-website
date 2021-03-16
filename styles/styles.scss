@@ -85,7 +85,7 @@
     }
 
     h1 {
-      font-size: 8vw;
+      font-size: 2.3rem;
       @include laptop {
         font-size: 5rem;
       }
@@ -172,6 +172,7 @@
     margin-bottom: 1rem;
     color: $primary;
   }
+  
 }
 
 
@@ -222,10 +223,7 @@
       text-align: left;
       align-items: flex-start;
     }
-    h1 {
-      font-size: 1.7rem;
-     
-    }
+   
  }
 
  &__image {
@@ -238,7 +236,7 @@
      }
    }
  }
- 
+
  
 }
 
@@ -292,7 +290,7 @@
   img {
   width: 100%;
   max-width: 600px;
-  border-radius: $border-radius;
+  border-radius: 20px;
   border: 1px solid gainsboro;
  
   }
