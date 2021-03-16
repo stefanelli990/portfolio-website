@@ -30,7 +30,7 @@
       display: block;
     }
     &__container {
-      @include container(1rem 1.5rem, 960px);
+      @include container(1rem, 960px);
       height: 10vh;
       display: flex;
       justify-content: center;
@@ -69,7 +69,7 @@
       z-index: -1;
     }
     &-container {
-      @include container(0rem 1.5rem 5rem, 600px);
+      @include container(0rem 1rem 5rem, 600px);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -77,15 +77,15 @@
       flex-direction: column;
       text-transform: uppercase;
       @include phone {
-        @include container(0rem 1.5rem, 600px);
+        @include container(0rem 1rem, 600px);
       }
       @include laptop {
-        @include container(0 1.5rem, 960px);
+        @include container(0 1rem, 960px);
       }
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 8vw;
       @include laptop {
         font-size: 5rem;
       }
@@ -146,9 +146,9 @@
   background-color: $light;
   color: $dark;
   &__container {
-    @include container(5rem 1.5rem, 600px);
+    @include container(5rem 1rem, 600px);
     @include laptop {
-      @include container(10rem 1.5rem, 960px);
+      @include container(10rem 1rem, 960px);
     }
   }
   
@@ -197,9 +197,9 @@
     z-index: -1;
   }
  &__container {
-  @include container(5rem 1.5rem, 600px);
+  @include container(5rem 1rem, 600px);
   @include laptop {
-    @include container(5rem 1.5rem, 960px);
+    @include container(5rem 1rem, 960px);
   }
    display: flex;
    flex-direction: column;
@@ -248,9 +248,9 @@
   background-color: $light;
   color: $dark;
   &-container {
-    @include container(5rem 1.5rem, 600px);
+    @include container(5rem 1rem, 600px);
     @include laptop {
-      @include container(10rem 1.5rem, 960px);
+      @include container(10rem 1rem, 960px);
     }
   }
 
@@ -321,9 +321,9 @@
   color: $dark;
   &-container {
     
-    @include container(5rem 1.5rem, 600px);
+    @include container(5rem 1rem, 600px);
     @include laptop {
-      @include container(10rem 1.5rem, 960px);
+      @include container(10rem 1rem, 960px);
     }
   }
 }
@@ -339,9 +339,9 @@
   color: $light;
   background-color: $dark;
   &-container {
-    @include container(5rem 1.5rem 10rem, 960px);
+    @include container(5rem 1rem 10rem, 960px);
     @include phone {
-      @include container(7rem 1.5rem, 960px);
+      @include container(7rem 1rem, 960px);
     }
     
   }
