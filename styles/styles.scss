@@ -55,9 +55,7 @@
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
-    @include laptop {
-      background-attachment: fixed;
-    }
+   
     &::before {
       content: "";
       position: absolute;
@@ -184,9 +182,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
-  @include laptop {
-    background-attachment: fixed;
-  }
+  
   &::before {
     content: "";
     position: absolute;
