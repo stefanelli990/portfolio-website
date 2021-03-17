@@ -489,7 +489,7 @@ h3 {
 
 .mobile-first__image img {
   width: 100%;
-  max-width: 40%;
+  max-width: 225px;
 }
 
 .mobile-first h1 {
