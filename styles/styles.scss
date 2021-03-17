@@ -85,7 +85,7 @@
     }
 
     h1 {
-      font-size: 2.3rem;
+      font-size: 2.5rem;
       @include laptop {
         font-size: 5rem;
       }
@@ -230,14 +230,15 @@
    flex: 1;
 
    img {
-     height: 300px;
-     @include tablet {
-       height: 400px;
-     }
+     width: 100%;
+     max-width: 40%;
+     
    }
  }
 
- 
+ h1 {
+   margin-bottom: 2rem;
+ }
 }
 
 

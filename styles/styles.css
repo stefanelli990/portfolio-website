@@ -9,10 +9,10 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 0.9rem;
+  font-size: 4vw;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
   html {
     font-size: 1rem;
   }
@@ -34,7 +34,7 @@ a {
   color: #ffffff;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
   margin-bottom: 1rem;
 }
 
@@ -48,10 +48,6 @@ h2 {
 
 h3 {
   font-size: 1.17rem;
-}
-
-p {
-  margin-bottom: 1rem;
 }
 
 .heading {
@@ -112,12 +108,6 @@ p {
   display: inline-block;
   width: 100%;
   max-width: 200px;
-}
-
-@media (max-width: 600px) {
-  .button-light, .button-green, .button-download {
-    max-width: 175px;
-  }
 }
 
 .button-light:hover {
@@ -272,7 +262,7 @@ p {
 }
 
 .showcase h1 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 992px) {
@@ -498,13 +488,12 @@ p {
 }
 
 .mobile-first__image img {
-  height: 300px;
+  width: 100%;
+  max-width: 40%;
 }
 
-@media (min-width: 768px) {
-  .mobile-first__image img {
-    height: 400px;
-  }
+.mobile-first h1 {
+  margin-bottom: 2rem;
 }
 
 .projects {

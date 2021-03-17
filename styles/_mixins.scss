@@ -19,6 +19,12 @@
 
 // media query
 
+@mixin mediaQuery($px) { 
+  @media(min-width: $px) {
+    @content;
+  }
+}
+
 @mixin small-phone {
   @media (max-width: 600px) {
     @content;
